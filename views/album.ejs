@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1></h1>
+
+<form>
+    <h1>Lista de Discos </h1>
+    <table border="1">
+        <% discos.forEach(function (d) { %>
+        <tr>
+            <th><a href="/<%=d.AlbumId%>"><%= d.Title %></a></th>
+        </tr>
+        <% }); %>
+
+    </table>
+
+</form>
+</body>
+</html>

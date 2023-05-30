@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1></h1>
+
+
+    <h1>Datos de la cancion </h1>
+    <form action="/actualizar" method="post">
+        <input type="hidden" name="TrackId" value="<%= (datos ? datos.TrackId : '') %>">
+        <input type="hidden" name="AlbumId" value="<%= (datos ? datos.AlbumId : '') %>">
+        <input type="hidden" name="MediaTypeId" value="<%= (datos ? datos.MediaTypeId : '') %>">
+        <input type="hidden" name="GenreId" value="<%= (datos ? datos.GenreId : '') %>">
+        <input type="hidden" name="UnitPrice" value="<%= (datos ? datos.UnitPrice : '') %>">
+        Name<input type="text" name="Name" value="<%= (datos ? datos.Name : '') %>"/><br>
+        Composer<input type="text" name="Composer" value="<%= (datos ? datos.Composer : '') %>"/><br>
+        Milliseconds<input type="text" name="Milliseconds" value="<%= (datos ? datos.Milliseconds : '') %>"/><br>
+        Bytes<input type="text" name="Bytes" value="<%= (datos ? datos.Bytes : '') %>"/><br>
+        <input value="Guardar" type="submit">
+    </form>
+
+    <a href="/<%= datos.AlbumId %>">VOLVER</a>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1></h1>
+
+<form>
+    <h1>Listado de Pedidos </h1>
+    <table border="1">
+        <tr>
+            <th>TRACKID</th>
+            <th>NAME</th>
+            <th>COMPOSER</th>
+            <th>MILISECONDS</th>
+            <th>BYTES</th>
+            <th>UNITPRICE</th>
+            <th>EDITAR</th>
+        </tr>
+        <% cancionesAlbum.forEach(function (c){ %>
+            <tr>
+                <td><%= c.TrackId %></td>
+                <td><a href="/detalles/<%= c.TrackId %>"><%= c.Name %></a></td>
+                <td><%= c.Composer %></td>
+                <td><%= c.Milliseconds %></td>
+                <td><%= c.Bytes %></td>
+                <td><%= c.UnitPrice %></td>
+                <td><a href="/editar/<%= c.TrackId %>">Editar</a></td>
+
+            </tr>
+        <% }); %>
+
+    </table>
+    <a href="/">Volver</a>
+</form>
+</body>
+</html>
